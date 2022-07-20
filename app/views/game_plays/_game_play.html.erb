@@ -1,0 +1,23 @@
+<div id="<%= dom_id game_play %>">
+  <p>
+    <strong>Name:</strong>
+    <%= game_play.name %>
+  </p>
+
+  <p>
+    <strong>Date:</strong>
+    <%= game_play.date %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= game_play.description %>
+  </p>
+
+  <p>  
+    <% if game_play.image.attached? %>
+      <%= image_tag game_play.image, with:"10px" %>
+    <% end %> 
+  </p>
+   
+</div>

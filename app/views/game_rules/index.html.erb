@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Game rules</h1>
+
+<div id="game_rules">
+  <% @game_rules.each do |game_rule| %>
+    <%= render game_rule %>
+    <p>
+      <%= link_to "Show this game rule", game_rule %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New game rule", new_game_rule_path %>

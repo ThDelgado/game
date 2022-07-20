@@ -1,0 +1,33 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Game parts</h1>
+
+<div id="game_parts">
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @game_parts.each do |game_part| %>
+      <tr>       
+        <td><% if game_part.images.attached? %>
+              <%= image_tag game_part.images do |image| %>
+               <%= image_tag image, with:"10px" %>
+              <% end %> 
+            <% end %> </td>     
+        <td><%= game_part.name %></td>
+        <td><%= link_to 'Show', game_part %></td>
+        <td><%= link_to 'Edit', edit_game_part_path(game_part) %></td>
+        <td><%= link_to 'Destroy', game_part, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New game piece", new_game_part_path %>
+
+
+

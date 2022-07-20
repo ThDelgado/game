@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  game_rule: MyText
+  game: one
+
+two:
+  game_rule: MyText
+  game: two

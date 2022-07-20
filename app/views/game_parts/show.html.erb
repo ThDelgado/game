@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @game_part %>
+
+<div>
+  <%= link_to "Edit this game part", edit_game_part_path(@game_part) %> |
+  <%= link_to "Back to game parts", game_parts_path %>
+
+  <%= button_to "Destroy this game part", @game_part, method: :delete %>
+</div>

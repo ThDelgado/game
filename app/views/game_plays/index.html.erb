@@ -1,0 +1,34 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Game plays</h1>
+
+<div id="game_plays">
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+   <% @game_plays.each do |game_play| %>
+    
+      <tr>
+        
+        <td><% if game_play.image.attached? %>
+           <%= image_tag game_play.image.variant(:thumb) %>
+           <% end %> </td>
+        <td><%= game_play.name %></td>
+        <td><%= game_play.date %></td>
+        <td><%= game_play.description %></td>
+        <td><%= link_to 'Show', game_play %></td>
+        <td><%= link_to 'Edit', edit_game_play_path(game_play) %></td>
+        <td><%= link_to 'Destroy', game_play, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to "New game game", new_game_play_path %>
+  
